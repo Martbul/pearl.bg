@@ -2,6 +2,8 @@ import { useRef, useState, useEffect, useContext } from "react";
 import * as orderService from '../../services/orderServices'
 import SuccessfulOrderModal from './SuccessfulOrderModal';
 import AuthContext from "../../contexts/authContext";
+
+import { UploadOutlined } from '@ant-design/icons';
 const formInitialState = {
   fullname: "",
   address: "",
@@ -156,7 +158,7 @@ export default function Order() {
                 )}
 
                 <div className="underline" />
-                <label htmlFor="fullname">Full name</label>
+                <label htmlFor="fullname">Пълно Име</label>
               </div>
               <div className="input-data">
                 <input
@@ -173,9 +175,12 @@ export default function Order() {
                 )}
 
                 <div className="underline" />
-                <label htmlFor="address">Address</label>
+                <label htmlFor="address">Адрес</label>
               </div>
             </div>
+
+
+
             <div className="form-row00">
               <div className="input-data">
                 <input
@@ -190,18 +195,22 @@ export default function Order() {
                     <p className="p11">{errors}</p>
                   </div>
                 )}
-
                 <div className="underline" />
                 <label htmlFor="">Preffered day for delivery</label>
               </div>
+
+
+
+
               <div className="input-data">
-                <input
+              <input type="file" id="myFile" name="filename" style={{color:'black'}}/>
+                {/* <input
                   type="text00"
                   id="timeForDelivery"
                   name="timeForDelivery"
                   value={formValues.timeForDelivery}
                   onChange={changeHandler}
-                />
+                /> */}
                 {errors == "Please enter a valid time for delivery" && (
                   <div className="d11">
                     <p className="p11">{errors}</p>
@@ -209,9 +218,13 @@ export default function Order() {
                 )}
 
                 <div className="underline" />
-                <label htmlFor="">Preffered time for delivery</label>
+                <label htmlFor="">Снимка</label>
               </div>
             </div>
+
+
+
+
             <div className="form-row00">
               <div className="input-data textarea">
                 <textarea
@@ -230,7 +243,7 @@ export default function Order() {
 
                 <br />
                 <div className="underline" />
-                <label htmlFor="">Order</label>
+                <label htmlFor="">Описание</label>
                 <br />
                 <div className="form-row00 submit-btn">
                   <div className="input-data">
