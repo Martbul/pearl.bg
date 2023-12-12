@@ -376,12 +376,12 @@ export default function Home() {
              </div>
              <div className="col-lg-6 download-right">
                <h1>
-                 Download the <br />
-                 Bind App Today!
+                 Изтегли <br />
+                 PearlBg сега!
                </h1>
                <p className="subs">
-                 Now you can download the Bind app. Select and manage your
-                 orders easily from the comfort of your phone.
+                 Вече можеш да търсиш подходящи бижута и украшение 
+                 от комфорта на телефона си
                </p>
                <div className="d-flex flex-row">
                  <div className="buttons">
@@ -389,8 +389,8 @@ export default function Home() {
                    <div className="desc">
                      <a href="#">
                        <p>
-                         <span>Available</span> <br />
-                         on App Store
+                         <span>Потърси</span> <br />
+                         в App Store
                        </p>
                      </a>
                    </div>
@@ -400,8 +400,8 @@ export default function Home() {
                    <div className="desc">
                      <a href="#">
                        <p>
-                         <span>Available</span> <br />
-                         on Play Store
+                         <span>Потърси</span> <br />
+                         в Play Store
                        </p>
                      </a>
                    </div>
@@ -412,7 +412,10 @@ export default function Home() {
          </div>
        </section>{" "}
        {/* end team section */}
-       <section className="contact_section layout_padding">
+       <section
+         style={{ backgroundColor: "#f6f6f6" }}
+         className="contact_section layout_padding"
+       >
          <div className="contact_bg_box">
            <div className="img-box">
              <img src="images/contact-bg.jpg" alt="" />
@@ -420,7 +423,7 @@ export default function Home() {
          </div>
          <div className="container">
            <div className="heading_container heading_center">
-             <h2>Have a questions?</h2>
+             <h2>Имате въпрос?</h2>
            </div>
            <div className="">
              <div className="row">
@@ -429,23 +432,21 @@ export default function Home() {
                    <div className="contact_form-container">
                      <div>
                        <div>
-                         <input type="text" placeholder="Full Name" />
+                         <input type="text" placeholder="Име" />
                        </div>
                        <div>
-                         <input type="email" placeholder="Email " />
+                         <input type="email" placeholder="Имейл" />
                        </div>
-                       <div>
-                         <input type="text" placeholder="Phone Number" />
-                       </div>
+                       
                        <div className="">
                          <input
                            type="text"
-                           placeholder="Message"
+                           placeholder="Въпрос"
                            className="message_input"
                          />
                        </div>
                        <div className="btn-box ">
-                         <button type="submit">Send</button>
+                         <button type="submit">Изпрати</button>
                        </div>
                      </div>
                    </div>

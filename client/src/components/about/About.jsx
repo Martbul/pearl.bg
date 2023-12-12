@@ -372,7 +372,7 @@ export default function About() {
          </div>
          <div className="container">
            <div className="heading_container heading_center">
-             <h2>Have a questions?</h2>
+             <h2>Имате въпрос?</h2>
            </div>
            <div className="">
              <div className="row">
@@ -381,23 +381,21 @@ export default function About() {
                    <div className="contact_form-container">
                      <div>
                        <div>
-                         <input type="text" placeholder="Full Name" />
+                         <input type="text" placeholder="Име" />
                        </div>
                        <div>
-                         <input type="email" placeholder="Email " />
+                         <input type="email" placeholder="Имейл" />
                        </div>
-                       <div>
-                         <input type="text" placeholder="Phone Number" />
-                       </div>
+                       
                        <div className="">
                          <input
                            type="text"
-                           placeholder="Message"
+                           placeholder="Въпрос"
                            className="message_input"
                          />
                        </div>
                        <div className="btn-box ">
-                         <button type="submit">Send</button>
+                         <button type="submit">Изпрати</button>
                        </div>
                      </div>
                    </div>
