@@ -30,11 +30,11 @@ export default function Home() {
                          </h1>
                          <p>Make last minute changes and track your order.</p>
                          <div className="btn-box">
-                           <Link to="/orders/order" className="btn-1">
-                             Order
+                           <Link to="/ads/ads" className="btn-1">
+                           ОБЯВИ
                            </Link>
                            <Link to="/learnMore" className="btn-2">
-                             Learn More
+                            ПОВЕЧЕ
                            </Link>
                          </div>
                        </div>
@@ -61,16 +61,15 @@ export default function Home() {
              <div className="col-md-6 px-0">
                <div className="detail-box">
                  <div className="heading_container ">
-                   <h2>Who Are We?</h2>
+                   <h2>Кои сме ние?</h2>
                  </div>
                  <p>
-                   Our goal is to make life more simple and easy. We want people
-                   to have more time to himself and for holiday. Also everyone
-                   who wants a sidehusle and a part job and be part of our
-                   Deliver program and make money.
+                  Нашата цел е да предоставим на всеки шанс да бъде себе си.
+                  Да не е зависим от цената и да намери най-доброто за себе си.
+                 
                  </p>
                  <div className="btn-box">
-                   <a href="">Read More</a>
+                   <a href="">Прочети повече</a>
                  </div>
                </div>
              </div>
@@ -81,7 +80,7 @@ export default function Home() {
        <section className="service_section layout_padding">
          <div className="container">
            <div className="heading_container heading_center">
-             <h2 style={{ color: "white" }}>Our services </h2>
+             <h2 style={{ color: "white" }}>Ние предлагме</h2>
            </div>
            <div className="row">
              <div className="col-md-4">
@@ -187,7 +186,7 @@ export default function Home() {
                    </svg>
                  </div>
                  <div className="detail-box">
-                   <h6>Save time</h6>
+                   <h6>Всеки може да продава</h6>
                    <p>Almost 90% of the people shop every week.</p>
                    <a href="">Read More</a>
                  </div>
@@ -251,8 +250,8 @@ export default function Home() {
                    </svg>
                  </div>
                  <div className="detail-box">
-                   <h6>Earn as a deliver</h6>
-                   <p>You can become a deliver and make money when you want.</p>
+                   <h6>Най-доброто е тук</h6>
+                   <p>Намери си твоите бижута, без притеснение от цената.</p>
                    <a href="">Read More</a>
                  </div>
                </div>
@@ -265,7 +264,7 @@ export default function Home() {
        <section className="client_section layout_padding">
          <div className="container ">
            <div className="heading_container heading_center">
-             <h2>What our clients says</h2>
+             <h2>Какво казват нашите клиенти</h2>
            </div>
            <div
              id="carouselExampleControls"
@@ -279,11 +278,10 @@ export default function Home() {
                      <img src="images/client.png" alt="" />
                    </div>
                    <div className="detail-box">
-                     <h4>Peter Dimov</h4>
+                     <h4>Петър Димов</h4>
                      <p>
-                       I hated weekly shopping so much, but i was the only one
-                       able to do in in my family. Now with Bind i don't have to
-                       spend time in the store.
+                      Тук успях да намеря пръстен за жена ми, цената беше достъпана 
+                      ,а пръстена в перфекто състояние. Сайтът предлага лесна и достъпна рабоата.
                      </p>
                    </div>
                  </div>
@@ -294,12 +292,11 @@ export default function Home() {
                      <img src="images/client.png" alt="" />
                    </div>
                    <div className="detail-box">
-                     <h4>Ivo Petrov</h4>
+                     <h4>Ивайло Петров</h4>
                      <p>
-                       The price is a bit high for a delivey , but they saved me
-                       so much time. Now that i dont have to go shop for
-                       groceries i have so much spare time. I was able to finish
-                       my docturanture.
+                     Лесно продадох една стара огрлица,
+                      нямах проблем нито при правенето на обявана 
+                      нито при самата подажба и доставка.
                      </p>
                    </div>
                  </div>
@@ -310,12 +307,10 @@ export default function Home() {
                      <img src="images/client.png" alt="" />
                    </div>
                    <div className="detail-box">
-                     <h4>Martin Kovachki</h4>
+                     <h4>Мартин Ковачки</h4>
                      <p>
-                       The service is the best in the whole county. I have never
-                       experienced the this type of service and now i love it.
-                       The delivery was on time and the products i ordered were
-                       in perfect condition
+                       Бих препоръчал PearBg на всеки който има бижу , което не неси и само събира прах.
+                       Сайтът разполага с добър интерфейс, лесно и бързо се работи с него.
                      </p>
                    </div>
                  </div>
@@ -346,24 +341,22 @@ export default function Home() {
        </section>
        {/* end client section */}
        {/* contact section */}
-       <section className="callto-action-area section-gap" id="join">
+       <section className="callto-action-area section-gap" id="join" >
          <div className="container">
            <div className="row d-flex justify-content-center">
              <div className="menu-content col-lg-9">
                <div className="title text-center">
-                 <h1 className="mb-10 text-white">Join us today</h1>
+                 <h1 className="mb-10 text-white">Добави обява</h1>
                  <p className="text-white">
-                   Make the dream true wit us. Become a deliver and make money
-                   when you want. Deliver order in your time schedule and
-                   preferred day. Have own customers and live the life you
-                   deserve
+                   PearlBg е идеалното място да премахнеш ненужните и събиращи прах бижута.
+
                  </p>
-                 <a className="primary-btn" href="#">
-                   Make deliver account
-                 </a>
-                 <a className="primary-btn" href="#">
-                   Lear more
-                 </a>
+                 <Link className="primary-btn" to="/orders/order" style={{backgroundColor:'#ffe6bc'}}>
+                   Добави обява
+                 </Link>
+                 <Link className="primary-btn" to="#" style={{backgroundColor:'#f6f6f6',color:"black"}}>
+                   Научи повече
+                 </Link>
                </div>
              </div>
            </div>

@@ -1,14 +1,14 @@
 import Search from "./Search";
-import BindsGrid from "./BindsGrid";
+import AdsGrid from "./AdsGrid";
 
-import { BindsProvider } from './../../contexts/bindsContext';
+import { BindsProvider } from '../../contexts/bindsContext';
 
 export default function Binds() {
    return (
      <>
        <BindsProvider>
        <Search />
-            <BindsGrid />
+            <AdsGrid/>
          </BindsProvider>
      </>
    );

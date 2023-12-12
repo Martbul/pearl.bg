@@ -1,7 +1,7 @@
 import * as bindsService from "../../services/bindsService";
 import { useContext, useEffect, useState } from "react";
 
-import BindCard from "./BindCard";
+import AdsCard from "./AdsCard";
 import InfoModal from "./InfoModal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -9,7 +9,7 @@ import Loader from "../loader/Loader";
 
 import BindsContext from "../../contexts/bindsContext";
 
-export default function BindsGrid() {
+export default function AdsGrid() {
   const [binds, setBinds] = useState([]);
 
   const [showMoreInfoModal, setMoreInfoModal] = useState(false);

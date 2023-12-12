@@ -2857,7 +2857,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 10px;
   text-transform: capitalize;
   border-radius: 0;
-  background-color: #49e4fa;
+  background-color: #2f2f2f;
   color: #fff;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;

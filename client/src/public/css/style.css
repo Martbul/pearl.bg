@@ -118,7 +118,7 @@ body {
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.35)));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(13, 153, 237, 1));
+  background: linear-gradient(to right, rgba(247, 241, 234, 1), rgba(247, 241, 234, 1));
 }
 
 .sub_page .hero_area {
@@ -334,7 +334,7 @@ a:focus {
 .slider_section .detail-box h1 {
   text-transform: uppercase;
   font-size: 3rem;
-  color: #ffffff;
+  color: rgba(191,191,191,1);
   font-weight: 600;
 }
 
@@ -378,7 +378,7 @@ a:focus {
 .slider_section .detail-box .btn-box .btn-2 {
   display: inline-block;
   padding: 10px 35px;
-  background-color: #f1db25;
+  background-color: #2f2f2f;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -946,7 +946,7 @@ a:focus {
 .contact-btns,
 .form-area .primary-btn {
   background-image: -moz-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
-  background-image: -webkit-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
+  background-image: -webkit-linear-gradient(0deg, #bfacff 0%, #706e75 100%);
   background-image: -ms-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
 }
 
@@ -954,7 +954,7 @@ a:focus {
   margin: 10px;
   text-transform: capitalize;
   border-radius: 0;
-  background-color: #f1db25!important;
+  background-color: #ffe6bc;
   color: #fff;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;

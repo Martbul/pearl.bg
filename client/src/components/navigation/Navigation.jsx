@@ -38,7 +38,7 @@ export default function Navigation() {
            
           <li className="nav-item">
                   <NavLink
-                    to="/binds/binds"
+                    to="/ads/ads"
                     className={({ isActive }) =>
                       isActive ? "nav-linkActive nav-link" : "nav-link"
                     }

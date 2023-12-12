@@ -3,7 +3,6 @@ import * as orderService from '../../services/orderServices'
 import SuccessfulOrderModal from './SuccessfulOrderModal';
 import AuthContext from "../../contexts/authContext";
 
-import { UploadOutlined } from '@ant-design/icons';
 const formInitialState = {
   fullname: "",
   address: "",

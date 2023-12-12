@@ -13,7 +13,7 @@ const formInitialState = {
 };
 
 
-export default function BindEdit() {
+export default function AdsEdit() {
   const navigate = useNavigate();
   const { bindId } = useParams();
   const [errors, setErrors] = useState("");
