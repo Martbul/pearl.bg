@@ -1,6 +1,6 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import * as bindsService from "../../services/bindsService";
+import * as bindsService from "../../services/displayAdsService";
 import useForm from "../../hooks/useForm";
 import AuthContext from "../../contexts/authContext";
 import { Link } from "react-router-dom";

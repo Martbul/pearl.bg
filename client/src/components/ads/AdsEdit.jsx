@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
 
-import * as bindService from '../../services/bindsService';
+import * as bindService from '../../services/displayAdsService';
 import { useEffect, useState } from 'react';
 
 

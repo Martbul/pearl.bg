@@ -1,9 +1,10 @@
 import * as request from "../lib/request";
-const baseUrl = "http://localhost:5050/binds/binds";
+const baseUrl = "http://localhost:5050/list/ads";
 
 export const getAll = async () => {
   
    const result = await request.get(baseUrl);
+   console.log(result);
    return result
 }
 

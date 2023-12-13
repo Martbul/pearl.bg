@@ -1,15 +1,15 @@
 import Search from "./Search";
 import AdsGrid from "./AdsGrid";
 
-import { BindsProvider } from '../../contexts/bindsContext';
+import { DisplayAdsProvider } from '../../contexts/displayAdsContext';
 
 export default function Binds() {
    return (
      <>
-       <BindsProvider>
+       <DisplayAdsProvider  >
        <Search />
             <AdsGrid/>
-         </BindsProvider>
+         </DisplayAdsProvider>
      </>
    );
 }

@@ -1,15 +1,13 @@
 const router = require("express").Router();
-const bindService = require("../services/bindsService");
-//const { isAuth } = require("./../middlewares/authMiddleware");
+const displayAdsService = require("../services/displayAdsService");
 
-router.get("/binds", async (req, res) => {
-  console.log(req);
-
+router.get("/ads", async (req, res) => {
+  
   try {
-    //  const orders = await orderService.getAll(search, from, to);
-    const binds = await bindService.getAll();
-    console.log(binds);
-    res.json(binds);
+    
+    const ads = await displayAdsService.getAll();
+
+    res.json(ads);
   } catch (message) {
     res.status(400).json({ message });
   }

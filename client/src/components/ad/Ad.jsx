@@ -68,14 +68,14 @@ export default function Ad() {
         navigate("/singup");
       }
     }
-    if (
-      formValues.fullname.length < 3 ||
-      typeof formValues.fullname != "string" ||
-      !formValues.fullname.match(/^[a-zA-Z]+ [a-zA-Z]+$/)
-    ) {
-      setErrors("Please enter a valid name");
-      throw new Error("Please enter a valid name");
-    }
+    // if (
+    //   formValues.fullname.length < 3 ||
+    //   typeof formValues.fullname != "string" ||
+    //   !formValues.fullname.match(/^[a-zA-Z]+ [a-zA-Z]+$/)
+    // ) {
+    //   setErrors("Please enter a valid name");
+    //   throw new Error("Please enter a valid name");
+    // }
 
     if (
       formValues.address.length < 5 ||

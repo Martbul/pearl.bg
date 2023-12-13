@@ -1,47 +1,49 @@
-import * as bindsService from "../../services/bindsService";
+import * as displayAdsService from "../../services/displayAdsService";
 import { useContext, useEffect, useState } from "react";
 
-import AdsCard from "./AdsCard";
+import AdCard from "./AdCard";
 import InfoModal from "./InfoModal";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Loader from "../loader/Loader";
 
-import BindsContext from "../../contexts/bindsContext";
+import displayAdsContext from "../../contexts/displayAdsContext";
 
 export default function AdsGrid() {
-  const [binds, setBinds] = useState([]);
+  const [ads, setAds] = useState([]);
 
   const [showMoreInfoModal, setMoreInfoModal] = useState(false);
-  const [selectedBind, setSelectedBind] = useState(null);
+  const [selectedAd, setSelectedAd] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const[isDeleted,setIsDelted] = useState(false);
 
-  const { searchorder, searchcity, searchday } = useContext(BindsContext);
+  const { searcharticle, searchcity, searchtype } = useContext(displayAdsContext);
   useEffect(() => {
     setIsLoading(true);
-    bindsService
+    displayAdsService
       .getAll()
       .then((result) => {
         // Filter the result based on the search values
-        const filteredBinds = result.filter(
-          (bind) =>
-            bind.order.toLowerCase().includes(searchorder.toLowerCase()) &&
-            bind.timeForDelivery
-              .toLowerCase()
-              .includes(searchcity.toLowerCase()) &&
-            bind.dayForDelivery.toLowerCase().includes(searchday.toLowerCase())
+        const filteredAds = result.filter(
+          (ad) =>
+            ad.article.toLowerCase().includes(searcharticle.toLowerCase()) 
+            //&&
+           // ad.timeForDelivery
+           //   .toLowerCase()
+            //  .includes(searchcity.toLowerCase()) 
+            &&
+            ad.address.toLowerCase().includes(searchcity.toLowerCase())
         );
-        setBinds(filteredBinds);
+        setAds(filteredAds);
       })
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
-  }, [searchorder, searchcity, searchday, isDeleted]);
+  }, [searcharticle, searchcity, searchtype, isDeleted]);
 
-  const onBindInfoClick = async (bind_id) => {
+  const onAdInfoClick = async (ad_id) => {
     // console.log(bind_id);
      setIsDelted(false);
-    setSelectedBind(bind_id);
+    setSelectedAd(ad_id);
     // console.log(selectedBind);
     setMoreInfoModal(true);
   };
@@ -62,20 +64,22 @@ export default function AdsGrid() {
         <InfoModal
           hideModal={hideMoreInfoModal}
           rerenderDeletedModal={rerendereletedModal}
-          bindId={selectedBind}
+          adId={selectedAd}
         />
       )}
 
       <Container>
         <Row>
-          {binds.map((bind) => (
-            <BindCard
-              key={bind._id}
-              bind_id={bind._id}
-              userFullName={bind.fullname}
-              userAddress={bind.address}
-              dayForDelivery={bind.dayForDelivery}
-              onBindInfoClick={onBindInfoClick}
+          {ads.map((ad) => (
+            <AdCard
+              key={ad._id}
+              ad_id={ad._id}
+              userFullName={ad.fullname}
+              userAddress={ad.address}
+             description={ad.description}
+             article={ad.article}
+             images={ad.images}
+              onAdInfoClick={onAdInfoClick}
             />
           ))}
         </Row>
