@@ -90,10 +90,10 @@ exports.getMyProfile = (userId)=>
 
 exports.addAdToUser = (article, email) => {
   // Find the user by ID
-  console.log(email);
+  console.log(article);
   User.findOneAndUpdate(
     { email: email },
-    { $push: { ads: article } },
+    { $push: { ads: article.article } },
     { new: true }
   )
     .then((updatedUser) => {

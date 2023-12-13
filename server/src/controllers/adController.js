@@ -4,7 +4,7 @@ const userService = require("../services/userService");
 
 
 router.post("/ad", async (req, res) => {
-  console.log(req.body);
+  
   const {
     fullname,
     address,
@@ -14,7 +14,7 @@ router.post("/ad", async (req, res) => {
     email,
     username,
   } = req.body;
-  // console.log(email);
+ 
 
   try {
   
@@ -28,7 +28,7 @@ router.post("/ad", async (req, res) => {
     });
 
 
-    await adService.userService({
+    await userService.addAdToUser({
       article
     },
       email,
