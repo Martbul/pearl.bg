@@ -14,7 +14,7 @@ import About from "./components/about/About";
 import NotFound from "./components/not-found/NotFound";
 import Profile from "./components/profile/Profile";
 import SingUp from "./components/singup/SingUp";
-import Order from "./components/order/Order";
+import Ad from "./components/ad/Ad";
 import Login from "./components/login/Login";
 import Ads from "./components/ads/Ads";
 import BecomeADeliver from "./components/become-a-deliver/BecomeADeliver";
@@ -40,7 +40,7 @@ function App() {
         <Routes>
           <Route path={Path.Home} element={<Home />} />
           <Route path={Path.LearnMore} element={<LearnMore />} />
-          <Route path={Path.Order} element={<Order />} />
+          <Route path={Path.Ad} element={<Ad />} />
 
           <Route path={Path.AdEdit} element={<AdEdit />} />
           <Route path={Path.About} element={<About />} />

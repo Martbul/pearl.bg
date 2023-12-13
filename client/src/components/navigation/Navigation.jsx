@@ -49,7 +49,7 @@ export default function Navigation() {
 
             <li className='nav-item'>
               <NavLink
-                to="/orders/order"
+                to="/ads/ad"
                 className={({ isActive }) =>
                   isActive ? "nav-linkActive nav-link "  : "nav-link"
                 }
@@ -76,26 +76,17 @@ export default function Navigation() {
                     Профил
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink
-                    to="/logout"
-                    className={({ isActive }) =>
-                      isActive ? "nav-linkActive nav-link" : "nav-link"
-                    }
-                  >
-                    Излизане
-                  </NavLink>
-                </li>
+               
               </>
             )}
              <li className="nav-item">
               <NavLink
-                to="/"
+                to="/ads/liked"
                 className={({ isActive }) =>
                   isActive ? "nav-linkActive nav-link" : "nav-link"
                 }
               >
-                <img src='./src/public/images/heart-492.png'/>
+                <img src='/src/public/images/heart-492.png'/>
               </NavLink>
             </li>
 
@@ -124,6 +115,20 @@ export default function Navigation() {
             </li>
               </>
             )}
+
+            {isAuthenticated == true && (
+            
+            <li className="nav-item">
+            <NavLink
+              to="/logout"
+              className={({ isActive }) =>
+                isActive ? "nav-linkActive nav-link" : "nav-link"
+              }
+            >
+              Излизане
+            </NavLink>
+          </li>
+           ) }
           </ul>
         </div>
       </div>

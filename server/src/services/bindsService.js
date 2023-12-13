@@ -1,4 +1,4 @@
-const Order = require("../models/order");
+const Ad = require("../models/Ads");
 
 exports.getAll = async () => {
   const binds = await Order.find().lean();

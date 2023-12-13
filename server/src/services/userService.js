@@ -30,7 +30,8 @@ exports.singup = async (userData) => {
   //console.log(userData);
   userData.firstName = ''
   userData.lastName = ''
-  userData.order = Array
+  userData.ads = Array
+  userData.likedAds = Array
   userData.country = ''
   userData.city = ''
   userData.phoneNumber = ''
@@ -87,12 +88,12 @@ exports.getMyProfile = (userId)=>
   
 
 
-exports.addOrderToUser = (order, email) => {
+exports.addAdToUser = (article, email) => {
   // Find the user by ID
   console.log(email);
   User.findOneAndUpdate(
     { email: email },
-    { $push: { order: order.order } },
+    { $push: { ads: article } },
     { new: true }
   )
     .then((updatedUser) => {

@@ -370,7 +370,7 @@ export default function Home() {
              <div className="col-lg-6 download-left">
                <img
                  className="img-fluid"
-                 src="./src/public/images/d1.png"
+                 src="./src/public/images/msa.png"
                  alt=""
                />
              </div>

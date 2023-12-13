@@ -51,7 +51,11 @@ const userSchema = new mongoose.Schema({
     type: String,  
   },
 
-  order: { 
+  ads: { 
+    type: Array,  
+   },
+
+   likedAds: { 
     type: Array,  
    },
 
