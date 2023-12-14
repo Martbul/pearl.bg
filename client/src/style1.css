@@ -10114,15 +10114,15 @@ textarea.form-control {
 
 .btn-info {
   color: #fff;
-  border-color: #11cdef;
-  background-color: #11cdef;
+  border-color: #f6f6f6;
+  background-color: #f6f6f6;
   box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 }
 
 .btn-info:hover {
   color: #fff;
-  border-color: #11cdef;
-  background-color: #11cdef;
+  border-color: #000000;
+  background-color: #000000;
 }
 
 .btn-info:focus {
@@ -10131,14 +10131,14 @@ textarea.form-control {
 
 .btn-info:disabled {
   color: #fff;
-  border-color: #11cdef;
-  background-color: #11cdef;
+  border-color: #000000;
+  background-color: #000000 ;
 }
 
 .btn-info:not(:disabled):not(.disabled):active {
   color: #fff;
-  border-color: #11cdef;
-  background-color: #0da5c0;
+  border-color: #000000;
+  background-color: #000000;
 }
 
 .btn-info:not(:disabled):not(.disabled):active:focus {

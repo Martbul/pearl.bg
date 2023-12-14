@@ -20,23 +20,7 @@ function AdCard({
   };
   return (
     <>
-      {/* <Card
-        style={{
-          width: "18rem",
-          marginLeft: "5%",
-          marginTop: "3%",
-          marginBottom: "3%",
-        }}
-      >
-        <Card.Body>
-          <Card.Title>{userFullName}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">
-            {userAddress}
-          </Card.Subtitle>
-          <Card.Text>{dayForDelivery}</Card.Text>
-          <button onClick={infoClickHandler}>Order Info</button>
-        </Card.Body>
-      </Card> */}
+     
 
 
 <Card  onClick={infoClickHandler} style={{
@@ -49,10 +33,10 @@ function AdCard({
             <Card.Body >
               <Card.Title>{article}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-            {userFullName}
+              {userAddress}
           </Card.Subtitle>
               <Card.Text>
-               {userAddress}
+              {userFullName} 
               </Card.Text>
               
             </Card.Body>

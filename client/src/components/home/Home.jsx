@@ -110,7 +110,7 @@ export default function Home() {
                  <div className="detail-box">
                    <h6>Get weekly groceries</h6>
                    <p>Make order for your weekly groceries with us.</p>
-                   <a href="">Read More</a>
+                   <a href="">Прочети повече</a>
                  </div>
                </div>
              </div>
@@ -188,7 +188,7 @@ export default function Home() {
                  <div className="detail-box">
                    <h6>Всеки може да продава</h6>
                    <p>Almost 90% of the people shop every week.</p>
-                   <a href="">Read More</a>
+                   <a href="">Прочети повече</a>
                  </div>
                </div>
              </div>
@@ -252,7 +252,7 @@ export default function Home() {
                  <div className="detail-box">
                    <h6>Най-доброто е тук</h6>
                    <p>Намери си твоите бижута, без притеснение от цената.</p>
-                   <a href="">Read More</a>
+                   <a href="">Прочети овече</a>
                  </div>
                </div>
              </div>
