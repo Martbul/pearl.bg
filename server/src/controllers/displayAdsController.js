@@ -13,15 +13,15 @@ router.get("/ads", async (req, res) => {
   }
 });
 
-router.get("/binds/:bindId", async (req, res) => {
-  const bindId = req.params.bindId;
+router.get("/ads/:adId", async (req, res) => {
+  const adId = req.params.bindId;
 
-  const bind = await bindService.getSingleBind(bindId).lean();
+  const ad = await bindService.getSingleBind(adId).lean();
 
-  if (!bind) {
+  if (!ad) {
     return;
   }
-  res.json(bind);
+  res.json(ad);
 
   //res.render("details");
 });

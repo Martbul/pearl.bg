@@ -39,9 +39,14 @@ function AdCard({
       </Card> */}
 
 
-<Card>
-            <Card.Img  src={images} style={{width:'6%'}}/>
-            <Card.Body>
+<Card  onClick={infoClickHandler} style={{
+          width: "18rem",
+          marginLeft: "5%",
+          marginTop: "3%",
+          marginBottom: "3%",
+        }}>
+            <Card.Img  src={images} style={{width:'287px', height:'280px'}} />
+            <Card.Body >
               <Card.Title>{article}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
             {userFullName}
@@ -49,6 +54,7 @@ function AdCard({
               <Card.Text>
                {userAddress}
               </Card.Text>
+              
             </Card.Body>
           </Card>
     </>

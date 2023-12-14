@@ -8,9 +8,9 @@ export const getAll = async () => {
    return result
 }
 
-export const getOne = async (bindId) => {
+export const getOne = async (adId) => {
    //console.log(bindId);
-  const result = await request.get(`${baseUrl}/${bindId}`);
+  const result = await request.get(`${baseUrl}/${adId}`);
   
 
   return result;

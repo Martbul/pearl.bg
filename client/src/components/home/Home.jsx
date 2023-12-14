@@ -25,10 +25,10 @@ export default function Home() {
                      <div className="col-md-7">
                        <div className="detail-box">
                          <h1>
-                           Weekly grocery delivery <br />
-                           <span>Our Responsibility</span>
+                           Втора ръка бижута <br />
+                           <span>и аксесоари</span>
                          </h1>
-                         <p>Make last minute changes and track your order.</p>
+                         <p>Намери най-доброто на достъпна цена.</p>
                          <div className="btn-box">
                            <Link to="/ads/ads" className="btn-1">
                            ОБЯВИ

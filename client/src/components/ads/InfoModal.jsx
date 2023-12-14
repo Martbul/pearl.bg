@@ -1,13 +1,12 @@
 import { useState, useEffect, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import * as bindsService from "../../services/displayAdsService";
-import useForm from "../../hooks/useForm";
+import * as displayAdsService from "../../services/displayAdsService";
 import AuthContext from "../../contexts/authContext";
 import { Link } from "react-router-dom";
 import { pathToUrl } from "../../utils/pathUtils";
 import Path from "../../paths";
 
-const bindDetailsFormKeys = {
+const adDetailsFormKeys = {
   Name: "name",
   Email: "email",
   PhoneNumber: "phoneNumber",
@@ -17,18 +16,18 @@ const bindDetailsFormKeys = {
   Order: "order",
 };
 
-export default function InfoModal({ hideModal, rerenderDeletedModal,bindId }) {
-  const [bindDetails, setBindDetails] = useState({});
+export default function InfoModal({ hideModal, rerenderDeletedModal,adId }) {
+  const [adDetails, setAdDetails] = useState({});
   const navigate = useNavigate();
   const { email } = useContext(AuthContext);
   const [like, setLike] = useState(false);
   const [isLiked,setIsLiked] = useState(false);
 
   useEffect(() => {
-    bindsService
-      .getOne(bindId)
+    displayAdsService
+      .getOne(adId)
       .then((result) => {
-        setBindDetails(result)
+        setAdDetails(result)
     return result
       }).then((result) => {
         if (result.likedBy.includes(email)){
@@ -40,10 +39,10 @@ export default function InfoModal({ hideModal, rerenderDeletedModal,bindId }) {
         
         
      
-  }, [bindId, like]);
+  }, [adId, like]);
 
   const addLikeHandler = async () => {
-    const result = await bindsService.addLikeToBind(bindId, email);
+    const result = await displayAdsService.addLikeToBind(adId, email);
     setLike(true);
   };
 
@@ -92,20 +91,20 @@ export default function InfoModal({ hideModal, rerenderDeletedModal,bindId }) {
             </button>
           </header>
 
-          <p>Name: {bindDetails.fullname}</p>
+          <p>Name: {adDetails.fullname}</p>
           {/* <p>Email: {bindDetails.email}</p>
             <p>Phonenumber: {bindDetails.PhoneNumber}</p> */}
           <p>
-            Day and time for delivery: {bindDetails.dayForDelivery}{" "}
-            {bindDetails.timeForDelivery}
+            Day and time for delivery: {adDetails.dayForDelivery}{" "}
+            {adDetails.timeForDelivery}
           </p>
           {/* <p>City: {bindDetails.city}</p> */}
-          <p>Address: {bindDetails.address}</p>
-          <p>Order: {bindDetails.order}</p>
-          <p>Likes: {bindDetails.likes}</p>
+          <p>Address: {adDetails.address}</p>
+          <p>Order: {adDetails.order}</p>
+          <p>Likes: {adDetails.likes}</p>
 
           <div id="form-actions">
-            {email !== bindDetails._ownerEmail &&
+            {email !== adDetails._ownerEmail &&
               !isLiked &&(
                 // <button
                 //   id="action-save"
@@ -126,7 +125,7 @@ export default function InfoModal({ hideModal, rerenderDeletedModal,bindId }) {
                 </button>
               )}
             
-                {email !== bindDetails._ownerEmail && isLiked && (
+                {email !== adDetails._ownerEmail && isLiked && (
               // <button
               //   id="action-save"
               //   className="btn"
@@ -147,13 +146,13 @@ export default function InfoModal({ hideModal, rerenderDeletedModal,bindId }) {
             )} 
 
             {/*          CHECKING FOR OWNERSHIP         */}
-            {email === bindDetails._ownerEmail && (
+            {email === adDetails._ownerEmail && (
               <>
                 <Link
                   id="action-save"
                   className="btn"
                   type="submit"
-                  to={pathToUrl(Path.OrderEdit, { bindId })}
+                  to={pathToUrl(Path.AdEdit, { adId })}
                 >
                   Edit
                 </Link>
