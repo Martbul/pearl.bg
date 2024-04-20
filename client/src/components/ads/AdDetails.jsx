@@ -80,7 +80,7 @@ export default function InfoModal({ hideModal, rerenderDeletedModal,adId }) {
                 className="svg-inline--fa fa-xmark"
                 role="img"
                 xmlns="https://www.svgrepo.com/svg/506648/clear/svg"
-                img
+               
                 viewBox="0 0 320 512"
               >
                 <path
