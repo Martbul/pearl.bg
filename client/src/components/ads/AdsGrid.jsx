@@ -58,6 +58,9 @@ export default function AdsGrid() {
 
   return (
     <>
+    <div>
+      <h1>Проектът работи с локален сървър</h1>
+    </div>
       {isLoading && <Loader />}
 
       {showMoreInfoModal && (
